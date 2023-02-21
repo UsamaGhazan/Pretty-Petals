@@ -1,0 +1,12 @@
+{
+  "name": "prettypetals",
+  "version": "1.0.0",
+  "description": "Starting Date\r 6/2/23",
+  "main": "server.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Usama",
+  "license": "MIT"
+}

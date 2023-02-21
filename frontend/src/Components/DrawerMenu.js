@@ -20,11 +20,12 @@ import {
   VStack,
   Link,
   Icon,
+  Divider,
 } from '@chakra-ui/react';
 import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
 
 import { FaBars, FaTimes } from 'react-icons/fa';
-import SideMenu from './SideMenu';
+import Category from './Category';
 
 const DrawerMenu = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -34,7 +35,11 @@ const DrawerMenu = () => {
       <Drawer placement="left" onClose={onClose} isOpen={isOpen} size="md">
         <DrawerOverlay />
         <DrawerContent>
-          <DrawerHeader justifyContent="center">
+          <DrawerHeader
+            justifyContent="center"
+            fontSize="3rem"
+            fontFamily="heading"
+          >
             Pretty Petals
             <IconButton
               icon={<FaTimes />}
@@ -42,41 +47,57 @@ const DrawerMenu = () => {
               position="absolute"
               right="0"
               onClick={onClose}
+              mt="20px"
             />
           </DrawerHeader>
           <DrawerBody>
-            <Flex justify="space-between">
-              <Text border="2px solid red" fontSize="lg">
+            <Flex>
+              <Text
+                fontSize="19px"
+                ml="25px"
+                color="gray.500"
+                fontFamily="text"
+              >
                 Scrunchies
               </Text>
 
-              <Text border="2px solid red" fontSize="lg">
+              <Text fontSize="lg" ml="240px" color="gray.500" fontFamily="text">
                 Totebags
               </Text>
             </Flex>
-            <SideMenu />
+            <Category />
 
-            <Link variant="brandPrimary" mt={2}>
+            <Link
+              fontSize="24px"
+              position="absolute"
+              mt="20px"
+              ml="193px"
+              borderBottom="1px solid gray"
+              fontFamily="text"
+            >
               Login
             </Link>
-            <HStack>
+            <HStack position="absolute" mt="80px" ml="180px">
               <a
                 href="https://instagram.com/prettypetalsbyet?igshid=YmMyMTA2M2Y="
                 target="_blank"
                 rel="noreferrer noopener"
               >
                 <Icon
+                  width="24px"
+                  height="24px"
                   as={FaFacebook}
                   role="https://chakra-ui.com/docs/components/icon/usage"
                 />
               </a>
               <a
+                ml="70px"
                 href="https://instagram.com/prettypetalsbyet?igshid=YmMyMTA2M2Y="
                 target="_blank"
                 rel="noreferrer noopener"
               >
                 {' '}
-                <Icon as={FaInstagram} />
+                <Icon width="24px" height="24px" as={FaInstagram} />
               </a>
 
               <a
@@ -85,7 +106,7 @@ const DrawerMenu = () => {
                 rel="noreferrer noopener"
               >
                 {' '}
-                <Icon as={FaTwitter} />
+                <Icon width="24px" height="24px" as={FaTwitter} />
               </a>
             </HStack>
           </DrawerBody>

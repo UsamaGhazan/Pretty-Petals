@@ -14,18 +14,20 @@ import DrawerMenu from './DrawerMenu';
 const Navbar = () => {
   return (
     <>
-      <Flex gap={5}>
-        <DrawerMenu />
+      <Box className="nav-width" pt="10px">
+        <Flex gap={5}>
+          <DrawerMenu />
 
-        <Spacer />
-        <Search />
-        <Link variant="brandPrimary" mt={2}>
-          Login
-        </Link>
-        <Box mt={1}>
-          <FaShoppingBag size={28} />
-        </Box>
-      </Flex>
+          <Spacer />
+          <Search />
+          <Link variant="brandPrimary" mt={2}>
+            Login
+          </Link>
+          <Box mt={1}>
+            <FaShoppingBag size={28} />
+          </Box>
+        </Flex>
+      </Box>
     </>
   );
 };

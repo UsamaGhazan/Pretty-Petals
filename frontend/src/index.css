@@ -1,0 +1,20 @@
+/* Utilities */
+.max-width {
+  padding: 0 80px;
+  max-width: 1300px;
+  margin: auto;
+}
+.nav-width {
+  padding: 0 80px;
+  max-width: 1600px;
+  margin: auto;
+}
+
+.homeSection {
+  height: 100vh;
+  background: url('../public/images/homebg.jpeg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
