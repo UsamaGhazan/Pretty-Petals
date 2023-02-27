@@ -8,7 +8,11 @@ const reviewSchema = mongoose.Schema({
   rating: { type: Number, required: true },
   comment: { type: String, required: true },
   //user ko refer kar rahy ta k aik hi user dobara review na dy saky
-  user: {},
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    required: true,
+    ref: 'User',
+  },
 });
 
 const productSchema = mongoose.Schema(
@@ -41,6 +45,17 @@ const productSchema = mongoose.Schema(
       default: 0,
     },
     countInStock: {
+      type: Number,
+      required: true,
+      default: 0,
+    },
+    review: [reviewSchema],
+    rating: {
+      type: Number,
+      required: true,
+      default: 0,
+    },
+    numReviews: {
       type: Number,
       required: true,
       default: 0,

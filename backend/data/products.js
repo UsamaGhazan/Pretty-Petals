@@ -8,6 +8,8 @@ const products = [
     description: 'This is description',
     price: 170,
     countInStock: 10,
+    rating: 4.5,
+    numReviews: 12,
   },
   {
     _id: '2',
@@ -19,6 +21,8 @@ const products = [
     description: 'TWO TONE GOLD HOOP EARRINGS',
     price: 210,
     countInStock: 5,
+    rating: 4.5,
+    numReviews: 12,
   },
   {
     _id: '3',
@@ -30,6 +34,8 @@ const products = [
     description: 'GOLD DROP EARRINGS',
     price: 200,
     countInStock: 0,
+    rating: 4.5,
+    numReviews: 12,
   },
   {
     _id: '4',
@@ -41,6 +47,8 @@ const products = [
     description: 'GOLD DROP EARRINGS',
     price: 200,
     countInStock: 0,
+    rating: 4.5,
+    numReviews: 12,
   },
   {
     _id: '5',
@@ -52,6 +60,8 @@ const products = [
     description: 'GOLD DROP EARRINGS',
     price: 200,
     countInStock: 0,
+    rating: 4.5,
+    numReviews: 12,
   },
   {
     _id: '6',
@@ -63,6 +73,8 @@ const products = [
     description: 'GOLD DROP EARRINGS',
     price: 200,
     countInStock: 0,
+    rating: 4.5,
+    numReviews: 12,
   },
   {
     _id: '7',
@@ -74,6 +86,8 @@ const products = [
     description: 'GOLD DROP EARRINGS',
     price: 200,
     countInStock: 0,
+    rating: 4.5,
+    numReviews: 12,
   },
   {
     _id: '8',
@@ -85,6 +99,8 @@ const products = [
     description: 'GOLD DROP EARRINGS',
     price: 200,
     countInStock: 0,
+    rating: 4.5,
+    numReviews: 12,
   },
   {
     _id: '9',
@@ -96,6 +112,8 @@ const products = [
     description: 'GOLD DROP EARRINGS',
     price: 200,
     countInStock: 0,
+    rating: 4.5,
+    numReviews: 12,
   },
   {
     _id: '10',
@@ -107,6 +125,8 @@ const products = [
     description: 'GOLD DROP EARRINGS',
     price: 200,
     countInStock: 0,
+    rating: 4.5,
+    numReviews: 12,
   },
   {
     _id: '11',
@@ -118,6 +138,8 @@ const products = [
     description: 'GOLD DROP EARRINGS',
     price: 200,
     countInStock: 0,
+    rating: 4.5,
+    numReviews: 12,
   },
   {
     _id: '12',
@@ -129,6 +151,8 @@ const products = [
     description: 'GOLD DROP EARRINGS',
     price: 200,
     countInStock: 0,
+    rating: 4.5,
+    numReviews: 12,
   },
 ];
 export default products;
