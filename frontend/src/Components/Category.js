@@ -11,7 +11,8 @@ import {
 } from '@chakra-ui/react';
 
 import React from 'react';
-import SubCategory from './SubCategory';
+import ScrunchieSubCategory from './ScrunchieSubCategory';
+import ToteSubCategory from './ToteSubCategory';
 
 const Category = () => {
   return (
@@ -27,7 +28,7 @@ const Category = () => {
             </AccordionButton>
           </h2>
           <AccordionPanel pb={4}>
-            <SubCategory />
+            <ScrunchieSubCategory />
           </AccordionPanel>
         </AccordionItem>
 
@@ -41,7 +42,7 @@ const Category = () => {
             </AccordionButton>
           </h2>
           <AccordionPanel pb={4}>
-            <SubCategory />
+            <ToteSubCategory />
           </AccordionPanel>
         </AccordionItem>
       </Accordion>
