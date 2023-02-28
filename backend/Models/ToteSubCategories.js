@@ -10,4 +10,4 @@ const ToteSubCategory = mongoose.model(
   ToteSubCategorySchema
 );
 
-export default SchrunchieSubCategory;
+export default ToteSubCategory;
