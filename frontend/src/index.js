@@ -4,6 +4,8 @@ import * as ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
+import { store } from './store';
+import { Provider } from 'react-redux';
 import theme from './theme';
 import './index.css';
 
@@ -12,7 +14,9 @@ const root = ReactDOM.createRoot(container);
 root.render(
   <ChakraProvider theme={theme}>
     <ColorModeScript />
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </ChakraProvider>
 );
 
