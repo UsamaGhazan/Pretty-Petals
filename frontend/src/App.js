@@ -13,12 +13,14 @@ import {
 } from '@chakra-ui/react';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import HomeScreen from './Screens/HomeScreen';
+import CasualScreen from './Screens/Scrunchie Screens/CasualScreen';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" index element={<HomeScreen />} />
+        <Route path="/casual" element={<CasualScreen />} />
+        <Route path="/" element={<HomeScreen />} />
       </Routes>
     </BrowserRouter>
   );

@@ -5,41 +5,41 @@ import { Link as ReachLink } from 'react-router-dom';
 const ScrunchieSubCategory = () => {
   return (
     <div>
-      <Link as={ReachLink} to="/Casual" fontFamily="text">
+      <Link as={ReachLink} to="/casual" fontFamily="text">
         Casual Scrunchie
       </Link>
       <br />
-      <Link as={ReachLink} to="/PatchWork" fontFamily="text">
+      <Link as={ReachLink} to="/patchWork" fontFamily="text">
         Patchwork Scrunchie
       </Link>
       <br />
 
-      <Link as={ReachLink} to="/Cotton" fontFamily="text">
+      <Link as={ReachLink} to="/cotton" fontFamily="text">
         Cotton Scrunchie
       </Link>
       <br />
 
-      <Link as={ReachLink} to="/Slip" fontFamily="text">
+      <Link as={ReachLink} to="/slip" fontFamily="text">
         Slip Scrunchie
       </Link>
       <br />
 
-      <Link as={ReachLink} to="/Silk" fontFamily="text">
+      <Link as={ReachLink} to="/silk" fontFamily="text">
         Silk Scrunchie
       </Link>
       <br />
 
-      <Link as={ReachLink} to="/Organza" fontFamily="text">
+      <Link as={ReachLink} to="/organza" fontFamily="text">
         Organza Scrunchie
       </Link>
       <br />
 
-      <Link as={ReachLink} to="/Velvet" fontFamily="text">
+      <Link as={ReachLink} to="/velvet" fontFamily="text">
         Velvet Scrunchie
       </Link>
       <br />
 
-      <Link as={ReachLink} to="/Bow" fontFamily="text">
+      <Link as={ReachLink} to="/bow" fontFamily="text">
         Bow Scrunchie
       </Link>
     </div>

@@ -4,7 +4,7 @@ import * as ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
-import { store } from './store';
+import store from './store';
 import { Provider } from 'react-redux';
 import theme from './theme';
 import './index.css';
