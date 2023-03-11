@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   Stack,
   HStack,
@@ -12,6 +12,9 @@ import {
 import Navbar from '../Components/Navbar';
 import Search from '../Components/Search';
 const HomeScreen = () => {
+  useEffect(() => {
+    console.log('Use effect is running');
+  });
   return (
     <div>
       <section className="homeSection">
@@ -26,7 +29,7 @@ const HomeScreen = () => {
               color="white"
               fontWeight="light"
             >
-              Pretty{' '}
+              Prett{' '}
             </Heading>
             <Spacer />
 

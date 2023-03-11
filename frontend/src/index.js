@@ -8,6 +8,7 @@ import store from './store';
 import { Provider } from 'react-redux';
 import theme from './theme';
 import './index.css';
+console.log('Index.js is being executed');
 
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);

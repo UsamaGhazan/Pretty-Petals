@@ -13,7 +13,9 @@ import {
 } from '@chakra-ui/react';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import HomeScreen from './Screens/HomeScreen';
-import CasualScreen from './Screens/Scrunchie Screens/CasualScreen';
+import CasualScreen from './Screens/CasualScreen';
+
+console.log('App is being executed');
 
 function App() {
   return (
