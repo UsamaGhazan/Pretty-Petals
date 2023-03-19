@@ -10,7 +10,7 @@ import '@fontsource/source-sans-pro';
 const theme = extendTheme({
   colors: {
     pretty: {
-      50: '#FEEBC8',
+      50: '#FEFFED',
     },
   },
   fonts: {

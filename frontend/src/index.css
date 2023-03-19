@@ -10,6 +10,10 @@
   margin: auto;
 }
 
+.bg-main {
+  background-color: #feffed;
+}
+
 .homeSection {
   height: 100vh;
   background: url('../public/homebg.jpeg') no-repeat center center fixed;
@@ -17,4 +21,8 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+.casualSection {
+  height: 100vh;
 }

@@ -35,20 +35,22 @@ const CasualScreen = () => {
   }, [dispatch]);
 
   return (
-    <Box bg="pretty.50">
-      <VStack
-        align="flex-start"
-        w="full"
-        h="full"
-        className="max-width"
-        bg="pretty.50"
-      >
-        <Heading m="auto" mt="50px">
-          Causal Scrunchie
+    <section className="casualSection bg-main">
+      <VStack align="flex-start" className="max-width">
+        <Heading m="auto" mb="100px">
+          Casual Scrunchie
         </Heading>
-        <Grid templateColumns="repeat(4,1fr)" gap="6" mt="30x">
+        <Grid templateColumns="repeat(4,1fr)" gap="20">
           {loading ? (
-            <Spinner margin="auto" />
+            <Box
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+              height="100vh"
+              width="100vh"
+            >
+              <Spinner size="xl" />
+            </Box>
           ) : (
             products
               .filter(product => {
@@ -57,47 +59,29 @@ const CasualScreen = () => {
               .map(product => {
                 return (
                   <GridItem key={product._id}>
-                    <Card maxW="sm">
-                      <CardBody>
-                        <Image
-                          src={product.image}
-                          alt={product.description}
-                          borderRadius="lg"
-                        />
-                        <Stack mt="6" spacing="3">
-                          <Heading size="md">{product.name}</Heading>
-                          <Text>
-                            {' '}
-                            This sofa is perfect for modern tropical spaces,
-                            baroque inspired spaces, earthy toned spaces and for
-                            people who love a chic design with a sprinkle of
-                            vintage design.
-                          </Text>
+                    <Image
+                      src={product.image}
+                      alt={product.description}
+                      width="234px"
+                      height="314px"
+                      border="2px solid black"
+                      p="10px"
+                    />
+                    <Stack mt="2" spacing="3">
+                      <Heading size="md" margin="auto">
+                        {product.name}
+                      </Heading>
 
-                          <Text color="blue.600" fontSize="2xl">
-                            $450
-                          </Text>
-                        </Stack>
-                      </CardBody>
-                      <Divider />
-                      <CardFooter>
-                        <ButtonGroup spacing="2">
-                          <Button variant="solid" colorScheme="blue">
-                            Buy now
-                          </Button>
-                          <Button variant="ghost" colorScheme="blue">
-                            Add to cart
-                          </Button>
-                        </ButtonGroup>
-                      </CardFooter>
-                    </Card>
+                      <Text textAlign="center">Rs. {product.price}</Text>
+                    </Stack>
+                    <Divider />
                   </GridItem>
                 );
               })
           )}
         </Grid>
       </VStack>
-    </Box>
+    </section>
   );
 };
 
