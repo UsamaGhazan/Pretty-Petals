@@ -14,7 +14,7 @@ import React from 'react';
 import ScrunchieSubCategory from './ScrunchieSubCategory';
 import ToteSubCategory from './ToteSubCategory';
 
-const Category = () => {
+const Category = ({ onClose }) => {
   return (
     <>
       <Accordion allowToggle fontFamily="text">
@@ -28,7 +28,7 @@ const Category = () => {
             </AccordionButton>
           </h2>
           <AccordionPanel pb={4}>
-            <ScrunchieSubCategory />
+            <ScrunchieSubCategory onClose={onClose} />
           </AccordionPanel>
         </AccordionItem>
 
@@ -42,7 +42,7 @@ const Category = () => {
             </AccordionButton>
           </h2>
           <AccordionPanel pb={4}>
-            <ToteSubCategory />
+            <ToteSubCategory onClose={onClose} />
           </AccordionPanel>
         </AccordionItem>
       </Accordion>

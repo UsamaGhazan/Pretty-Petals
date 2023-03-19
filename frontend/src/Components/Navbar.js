@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaBars, FaShoppingBag } from 'react-icons/fa';
+import { useLocation } from 'react-router-dom';
 import {
   Stack,
   HStack,
@@ -12,22 +13,24 @@ import {
 import Search from './Search';
 import DrawerMenu from './DrawerMenu';
 const Navbar = () => {
+  const location = useLocation();
+  console.log(location);
   return (
     <>
-      <Box className="nav-width" pt="10px">
-        <Flex gap={5}>
-          <DrawerMenu />
+      {location.pathname !== '/' && (
+        <Box className="nav-width" pt="10px" bg="pretty.50">
+          <Flex gap={5}>
+            <DrawerMenu />
 
-          <Spacer />
-          <Search />
-          <Link variant="brandPrimary" mt={2}>
-            Login
-          </Link>
-          <Box mt={1}>
-            <FaShoppingBag size={28} />
-          </Box>
-        </Flex>
-      </Box>
+            <Spacer />
+            <Search />
+            <Link mt={2}>Login</Link>
+            <Box mt={1}>
+              <FaShoppingBag size={28} />
+            </Box>
+          </Flex>
+        </Box>
+      )}
     </>
   );
 };

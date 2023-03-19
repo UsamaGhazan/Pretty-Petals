@@ -7,11 +7,9 @@ const initialState = {
   error: '',
 };
 
-export const listProducts = createAsyncThunk('ProductList', async () => {
+export const listProducts = createAsyncThunk('getProductList', async () => {
   try {
-    console.log('list products is working');
     const { data } = await axios.get(`/api/products`);
-    console.log(data);
     return data;
   } catch (error) {
     return error;
@@ -28,6 +26,7 @@ const productListSlice = createSlice({
       };
     },
     [listProducts.fulfilled]: (state, action) => {
+      console.log(action.payload);
       return {
         loading: false,
         products: action.payload,

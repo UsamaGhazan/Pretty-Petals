@@ -65,7 +65,7 @@ const DrawerMenu = () => {
                 Totebags
               </Text>
             </Flex>
-            <Category />
+            <Category onClose={onClose} />
 
             <Link
               fontSize="24px"

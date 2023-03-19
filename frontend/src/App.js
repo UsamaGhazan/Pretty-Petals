@@ -12,17 +12,17 @@ import {
   Heading,
 } from '@chakra-ui/react';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
+import Navbar from './Components/Navbar';
 import HomeScreen from './Screens/HomeScreen';
 import CasualScreen from './Screens/CasualScreen';
-
-console.log('App is being executed');
 
 function App() {
   return (
     <BrowserRouter>
+      <Navbar />
       <Routes>
-        <Route path="/casual" element={<CasualScreen />} />
         <Route path="/" element={<HomeScreen />} />
+        <Route path="/casual" element={<CasualScreen />} />
       </Routes>
     </BrowserRouter>
   );

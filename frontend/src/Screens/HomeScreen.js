@@ -8,17 +8,29 @@ import {
   Spacer,
   Heading,
   Text,
+  Link,
 } from '@chakra-ui/react';
 import Navbar from '../Components/Navbar';
 import Search from '../Components/Search';
+import DrawerMenu from '../Components/DrawerMenu';
+import { FaShoppingBag } from 'react-icons/fa';
 const HomeScreen = () => {
-  useEffect(() => {
-    console.log('Use effect is running');
-  });
   return (
     <div>
-      <section className="homeSection">
-        <Navbar />
+      <section className="homeSection" background="#FFFDD0">
+        <Box className="nav-width" pt="10px">
+          <Flex gap={5}>
+            <DrawerMenu />
+
+            <Spacer />
+            <Search />
+
+            <Link mt={2}>Login</Link>
+            <Box mt={1}>
+              <FaShoppingBag size={28} />
+            </Box>
+          </Flex>
+        </Box>
         <Box className="max-width">
           <Flex alignItems="center" justifyContent="center" height="600px">
             <Heading
@@ -29,7 +41,7 @@ const HomeScreen = () => {
               color="white"
               fontWeight="light"
             >
-              Prett{' '}
+              Pretty{' '}
             </Heading>
             <Spacer />
 
