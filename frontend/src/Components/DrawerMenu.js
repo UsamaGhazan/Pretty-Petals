@@ -1,26 +1,19 @@
 import React, { useState } from 'react';
+import { Link as routerLink } from 'react-router-dom';
+
 import {
   useDisclosure,
   Drawer,
   DrawerBody,
-  DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
   DrawerContent,
-  DrawerCloseButton,
-  Stack,
-  Radio,
-  RadioGroup,
-  Button,
   HStack,
   IconButton,
   Flex,
-  Spacer,
   Text,
-  VStack,
-  Link,
   Icon,
-  Divider,
+  Link,
 } from '@chakra-ui/react';
 import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
 
@@ -35,21 +28,23 @@ const DrawerMenu = () => {
       <Drawer placement="left" onClose={onClose} isOpen={isOpen} size="md">
         <DrawerOverlay />
         <DrawerContent>
-          <DrawerHeader
-            justifyContent="center"
-            fontSize="3rem"
-            fontFamily="heading"
-          >
-            Pretty Petals
-            <IconButton
-              icon={<FaTimes />}
-              variant="ghost"
-              position="absolute"
-              right="0"
-              onClick={onClose}
-              mt="20px"
-            />
-          </DrawerHeader>
+          <Link as={routerLink} to={'/'} style={{ textDecoration: 'none' }}>
+            <DrawerHeader
+              justifyContent="center"
+              fontSize="3rem"
+              fontFamily="heading"
+            >
+              Pretty Petals
+              <IconButton
+                icon={<FaTimes />}
+                variant="ghost"
+                position="absolute"
+                right="0"
+                onClick={onClose}
+                mt="20px"
+              />
+            </DrawerHeader>
+          </Link>
           <DrawerBody>
             <Flex>
               <Text
@@ -68,12 +63,15 @@ const DrawerMenu = () => {
             <Category onClose={onClose} />
 
             <Link
+              as={routerLink}
+              to={'/login'}
               fontSize="24px"
               position="absolute"
               mt="20px"
               ml="193px"
               borderBottom="1px solid gray"
               fontFamily="text"
+              style={{ textDecoration: 'none' }}
             >
               Login
             </Link>

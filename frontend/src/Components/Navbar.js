@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaBars, FaShoppingBag } from 'react-icons/fa';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link as routerLink } from 'react-router-dom';
 import {
   Stack,
   HStack,
@@ -24,7 +24,14 @@ const Navbar = () => {
 
             <Spacer />
             <Search />
-            <Link mt={2}>Login</Link>
+            <Link
+              as={routerLink}
+              to={'/login'}
+              mt={2}
+              style={{ textDecoration: 'none' }}
+            >
+              Login
+            </Link>
             <Box mt={1}>
               <FaShoppingBag size={28} />
             </Box>

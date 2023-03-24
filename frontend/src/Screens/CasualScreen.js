@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import {
   Box,
   Flex,
@@ -59,21 +59,24 @@ const CasualScreen = () => {
               .map(product => {
                 return (
                   <GridItem key={product._id}>
-                    <Image
-                      src={product.image}
-                      alt={product.description}
-                      width="234px"
-                      height="314px"
-                      border="2px solid black"
-                      p="10px"
-                    />
-                    <Stack mt="2" spacing="3">
-                      <Heading size="md" margin="auto">
-                        {product.name}
-                      </Heading>
+                    <Link to={`/product/${product._id}`}>
+                      <Image
+                        src={product.image}
+                        alt={product.description}
+                        width="234px"
+                        height="314px"
+                        border="2px solid black"
+                        p="10px"
+                      />
+                      <Stack mt="2" spacing="3">
+                        <Heading size="md" margin="auto">
+                          {product.name}
+                        </Heading>
 
-                      <Text textAlign="center">Rs. {product.price}</Text>
-                    </Stack>
+                        <Text textAlign="center">Rs. {product.price}</Text>
+                      </Stack>
+                    </Link>
+
                     <Divider />
                   </GridItem>
                 );

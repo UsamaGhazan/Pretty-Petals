@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link as routerLink } from 'react-router-dom';
 import {
   Stack,
   HStack,
@@ -25,7 +26,14 @@ const HomeScreen = () => {
             <Spacer />
             <Search />
 
-            <Link mt={2}>Login</Link>
+            <Link
+              as={routerLink}
+              to={'/login'}
+              mt={3}
+              style={{ textDecoration: 'none' }}
+            >
+              Login
+            </Link>
             <Box mt={1}>
               <FaShoppingBag size={28} />
             </Box>
